@@ -1,0 +1,1 @@
+A simple TextMate grammar specification for my custom programming language, Haze, designed around the Visual Studio 2022 editor. Eventually, my full LSP-compliant language server VSIX will release here as progress continues on that.
