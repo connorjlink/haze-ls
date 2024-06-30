@@ -8,84 +8,97 @@
         <array>
             <dict>
                 <key>name</key>
-                <string>keyword.command.haze</string>
+                <string>variable.language</string>
                 <key>match</key>
                 <string>\b(?:move|load|copy|save|iadd|isub|band|bior|bxor|call|exit|push|pull|brez)\b</string>
             </dict>
 			<dict>
 				<key>name</key>
-				<string>keyword.control.process.haze</string>
+				<string>keyword.other</string>
 				<key>match</key>
 				<string>\b(?:asm)\b</string>
 			</dict>
             <dict>
                 <key>name</key>
-                <string>keyword.control.statement.haze</string>
+                <string>keyword.control</string>
                 <key>match</key>
-                <string>\b(?:return)\b</string>
+                <string>\b(?:while|return)\b</string>
             </dict>
+			<!--
             <dict>
                 <key>name</key>
                 <string>keyword.control.conditional.haze</string>
                 <key>match</key>
                 <string>\b(?:if|else)\b</string>
             </dict>
-            <dict>
-                <key>name</key>
-                <string>keyword.control.repeat.haze</string>
-                <key>match</key>
-                <string>\b(?:while)\b</string>
-            </dict>
+			-->
 			<dict>
 				<key>name</key>
-				<string>keyword.declarator.haze</string>
+				<string>storage.type</string>
 				<key>match</key>
-				<string>\b(?:intrinsic|geometry)\b</string>
+				<string>\b(?:function|intrinsic|geometry)\b</string>
 			</dict>
 			<dict>
 				<key>name</key>
-				<string>keyword.register.haze</string>
+				<string>keyword.operator</string>
 				<key>match</key>
 				<string>\b(?:r0|r1|r2|r3)\b</string>
 			</dict>
 			<dict>
 				<key>name</key>
-				<string>keyword.type.haze</string>
+				<string>entity.name.section</string>
+				<key>match</key>
+				<string>^\s[a-zA-Z]+:</string>
+			</dict>
+			<dict>
+				<key>name</key>
+				<string>storage.type</string>
 				<key>match</key>
 				<string>\b(?:byte)\b</string>
 			</dict>
 			<dict>
 				<key>name</key>
-				<string>keyword.dotdir.haze</string>
+				<string>keyword.dotdir</string>
 				<key>match</key>
 				<string>^\s*(?:\.include|\.define|\.org)\b</string>
 			</dict>
             <dict>
                 <key>name</key>
-                <string>keyword.operator.haze</string>
+                <string>keyword.operator</string>
                 <key>match</key>
-                <string>\b(?:\+|-|\*)\b</string>
+                <string>(?:\+|-|\*|=|\(|\)|\{|\})</string>
             </dict>
             <dict>
                 <key>name</key>
-                <string>comment.line.haze</string>
+                <string>comment.line</string>
                 <key>match</key>
                 <string>\/\/.*?$</string>
             </dict>
-            <dict>
-                <key>captures</key>
-                <dict>
-                    <key>1</key>
-                    <dict>
-                        <key>name</key>
-                        <string>variable.parameter.function.begin.shell</string>
-                    </dict>
-                </dict>
-                <key>name</key>
-                <string>variable.parameter.function.haze</string>
-                <key>match</key>
-                <string>(?i)(%)(~(?:f|d|p|n|x|s|a|t|z|\$[^:]*:)*)?\d</string>
-            </dict>
+			<dict>
+				<key>name</key>
+				<string>constant.numeric</string>
+				<key>match</key>
+				<string>(?&lt;!\w)#[a-zA-Z0-9]+\b</string>
+			</dict>
+			<dict>
+				<key>name</key>
+				<string>constant.numeric</string>
+				<key>match</key>
+				<string>(?&lt;!\w)\$[a-zA-Z0-9]+\b</string>
+			</dict>
+			<dict>
+				<key>name</key>
+				<string>constant.numeric</string>
+				<key>match</key>
+				<string>(?&lt;!\w)&amp;[a-zA-Z0-9]+\b</string>
+			</dict>
+			<dict>
+				<key>name</key>
+				<string>constant.numeric</string>
+				<key>match</key>
+				<string>(?&lt;!\w)[0-9]+\b</string>
+			</dict>
+			<!--
             <dict>
                 <key>captures</key>
                 <dict>
@@ -100,44 +113,7 @@
                 <key>match</key>
                 <string>(?i)(%%)(~(?:f|d|p|n|x|s|a|t|z|\$[^:]*:)*)?[a-z]</string>
             </dict>
-            <dict>
-                <key>captures</key>
-                <dict>
-                    <key>1</key>
-                    <dict>
-                        <key>name</key>
-                        <string>variable.other.parsetime.begin.shell</string>
-                    </dict>
-                    <key>2</key>
-                    <dict>
-                        <key>name</key>
-                        <string>variable.other.parsetime.end.shell</string>
-                    </dict>
-                </dict>
-                <key>name</key>
-                <string>variable.other.parsetime.haze</string>
-                <key>match</key>
-                <string>(%)[^%]+(%)</string>
-            </dict>
-            <dict>
-                <key>captures</key>
-                <dict>
-                    <key>1</key>
-                    <dict>
-                        <key>name</key>
-                        <string>variable.other.delayed.begin.shell</string>
-                    </dict>
-                    <key>2</key>
-                    <dict>
-                        <key>name</key>
-                        <string>variable.other.delayed.end.shell</string>
-                    </dict>
-                </dict>
-                <key>name</key>
-                <string>variable.other.delayed.haze</string>
-                <key>match</key>
-                <string>(!)[^!]+(!)</string>
-            </dict>
+			-->
             <dict>
                 <key>begin</key>
                 <string>"</string>
@@ -146,7 +122,7 @@
                     <key>0</key>
                     <dict>
                         <key>name</key>
-                        <string>punctuation.definition.string.end.shell</string>
+                        <string>punctuation.string.end</string>
                     </dict>
                 </dict>
                 <key>beginCaptures</key>
@@ -154,19 +130,13 @@
                     <key>0</key>
                     <dict>
                         <key>name</key>
-                        <string>punctuation.definition.string.begin.shell</string>
+                        <string>punctuation.string.begin</string>
                     </dict>
                 </dict>
                 <key>name</key>
-                <string>string.quoted.double.haze</string>
+                <string>string.quoted.double</string>
                 <key>end</key>
                 <string>"|$</string>
-            </dict>
-            <dict>
-                <key>name</key>
-                <string>keyword.operator.redirect.shell</string>
-                <key>match</key>
-                <string>&amp;&gt;|\d*&gt;&amp;\d*|\d*(&gt;&gt;|&gt;|&lt;)|\d*&lt;&amp;|\d*&lt;&gt;</string>
             </dict>
         </array>
         <key>name</key>
