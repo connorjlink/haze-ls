@@ -48,7 +48,7 @@
 				<key>name</key>
 				<string>entity.name.section</string>
 				<key>match</key>
-				<string>^\s[a-zA-Z]+:</string>
+				<string>^\s*[a-zA-Z]+:</string>
 			</dict>
 			<dict>
 				<key>name</key>
@@ -74,6 +74,12 @@
                 <key>match</key>
                 <string>\/\/.*?$</string>
             </dict>
+			<dict>
+				<key>name</key>
+				<string>comment.line</string>
+				<key>match</key>
+				<string>;.*?$</string>
+			</dict>
 			<dict>
 				<key>name</key>
 				<string>constant.numeric</string>
