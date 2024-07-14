@@ -10,7 +10,7 @@
                 <key>name</key>
                 <string>variable.language</string>
                 <key>match</key>
-                <string>\b(?:move|load|copy|save|iadd|isub|band|bior|bxor|call|exit|push|pull|brez)\b</string>
+                <string>\b(?:move|load|copy|save|iadd|isub|band|bior|bxor|call|exit|push|pull|brnz|bool)\b</string>
             </dict>
 			<dict>
 				<key>name</key>
