@@ -22,7 +22,7 @@
                 <key>name</key>
                 <string>keyword.control</string>
                 <key>match</key>
-                <string>\b(?:while|return)\b</string>
+                <string>\b(?:if|else|for|while|return)\b</string>
             </dict>
 			<!--
             <dict>
@@ -46,6 +46,12 @@
 			</dict>
 			<dict>
 				<key>name</key>
+				<string>keyword.operator</string>
+				<key>match</key>
+				<string>\b(?:sky_color|mouse_sensitivity|fov)\b</string>
+			</dict>
+			<dict>
+				<key>name</key>
 				<string>entity.name.section</string>
 				<key>match</key>
 				<string>^\s*[a-zA-Z]+:</string>
@@ -54,13 +60,13 @@
 				<key>name</key>
 				<string>storage.type</string>
 				<key>match</key>
-				<string>\b(?:byte|nvr)\b</string>
+				<string>\b(?:byte|nvr|float)\b</string>
 			</dict>
 			<dict>
 				<key>name</key>
 				<string>keyword.dotdir</string>
 				<key>match</key>
-				<string>^\s*(?:\.include|\.define|\.org)\b</string>
+				<string>^\s*(?:\.include|\.define|\.org|\.macro)\b</string>
 			</dict>
 			<dict>
 				<key>name</key>
