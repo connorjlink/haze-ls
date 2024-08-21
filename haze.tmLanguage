@@ -16,7 +16,7 @@
 				<key>name</key>
 				<string>keyword.other</string>
 				<key>match</key>
-				<string>\b(?:asm)\b</string>
+				<string>\b(?:asm|print)\b</string>
 			</dict>
             <dict>
                 <key>name</key>
@@ -66,7 +66,7 @@
 				<key>name</key>
 				<string>keyword.dotdir</string>
 				<key>match</key>
-				<string>^\s*(?:\.include|\.define|\.org|\.macro)\b</string>
+				<string>^\s*(?:\.include|\.define|\.org|\.macro|\.hook|\.unhook)\b</string>
 			</dict>
 			<dict>
 				<key>name</key>
