@@ -1,8 +1,13 @@
 {
-  "uuid": "E07EC438-7B75-4437-8AA1-DA94C1E6EACC",
+  "scopeName": "source.haze",
+  "fileTypes": [
+    "hz",
+    "hzs",
+    "hzi"
+  ],
   "patterns": [
     {
-      "name": "variable.language",
+      "name": "keyword.control",
       "match": "\\b(?:move|load|copy|save|iadd|isub|band|bior|bxor|call|exit|push|pull|brnz|bool)\\b"
     },
     {
@@ -18,12 +23,8 @@
       "match": "\\b(?:function|intrinsic|geometry)\\b"
     },
     {
-      "name": "keyword.operator",
+      "name": "storage.type",
       "match": "\\b(?:r0|r1|r2|r3)\\b"
-    },
-    {
-      "name": "keyword.operator",
-      "match": "\\b(?:sky_color|mouse_sensitivity|fov)\\b"
     },
     {
       "name": "entity.name.section",
@@ -43,7 +44,7 @@
     },
     {
       "name": "keyword.operator",
-      "match": "(?:;|\\+|-|\\*|=|\\(|\\)|\\{|\\})"
+      "match": "(?:;|\\+|-|\\*|=|\\(|\\)|\\{|\\}|,|\\[|\\])"
     },
     {
       "name": "comment.line",
@@ -80,12 +81,5 @@
       "name": "string.quoted.double",
       "end": "\"|$"
     }
-  ],
-  "name": "Haze Source",
-  "scopeName": "source.haze",
-  "fileTypes": [
-    "hz",
-    "hzs",
-    "hzi"
   ]
 }

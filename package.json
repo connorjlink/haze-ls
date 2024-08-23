@@ -3,7 +3,7 @@
 	"description": "A context-sensitive LSP-compliant language server for my programming language suite, Haze.",
 	"author": "Connor J. Link",
 	"license": "MIT",
-	"version": "0.0.1",
+	"version": "1.0.0",
 	"repository": {
 		"type": "git",
 		"url": "https://github.com/connorjlink/haze-ls"
@@ -31,21 +31,21 @@
 		"grammars": [
 			{
 				"language": "hz",
-				"scopeName": "source.hz",
-				"path": "./syntaxes/haze.tmLanguage"
+				"scopeName": "source.haze",
+				"path": "./syntaxes/haze.tmLanguage.json"
 			}
 		],
 		"configuration": {
 			"type": "object",
 			"title": "haze-ls configuration",
 			"properties": {
-				"languageServerExample.maxNumberOfProblems": {
+				"haze-ls.maxNumberOfProblems": {
 					"scope": "resource",
 					"type": "number",
 					"default": 100,
 					"description": "Controls the maximum number of problems produced by the server."
 				},
-				"languageServerExample.trace.server": {
+				"haze-ls.trace.server": {
 					"scope": "window",
 					"type": "string",
 					"enum": [
