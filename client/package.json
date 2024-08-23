@@ -1,0 +1,22 @@
+{
+	"name": "haze-ls-client",
+	"description": "Client side (VSCode-facing) component of haze-ls",
+	"author": "connorjlink",
+	"license": "MIT",
+	"version": "0.0.1",
+	"publisher": "connorjlink",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/connorjlink/haze-ls"
+	},
+	"engines": {
+		"vscode": "^1.75.0"
+	},
+	"dependencies": {
+		"vscode-languageclient": "^9.0.1"
+	},
+	"devDependencies": {
+		"@types/vscode": "^1.75.1",
+		"@vscode/test-electron": "^2.3.9"
+	}
+}

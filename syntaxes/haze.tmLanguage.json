@@ -1,0 +1,91 @@
+{
+  "uuid": "E07EC438-7B75-4437-8AA1-DA94C1E6EACC",
+  "patterns": [
+    {
+      "name": "variable.language",
+      "match": "\\b(?:move|load|copy|save|iadd|isub|band|bior|bxor|call|exit|push|pull|brnz|bool)\\b"
+    },
+    {
+      "name": "keyword.other",
+      "match": "\\b(?:asm|print)\\b"
+    },
+    {
+      "name": "keyword.control",
+      "match": "\\b(?:if|else|for|while|return)\\b"
+    },
+    {
+      "name": "storage.type",
+      "match": "\\b(?:function|intrinsic|geometry)\\b"
+    },
+    {
+      "name": "keyword.operator",
+      "match": "\\b(?:r0|r1|r2|r3)\\b"
+    },
+    {
+      "name": "keyword.operator",
+      "match": "\\b(?:sky_color|mouse_sensitivity|fov)\\b"
+    },
+    {
+      "name": "entity.name.section",
+      "match": "^\\s*[a-zA-Z]+:"
+    },
+    {
+      "name": "storage.type",
+      "match": "\\b(?:byte|nvr|float)\\b"
+    },
+    {
+      "name": "keyword.dotdir",
+      "match": "^\\s*(?:\\.include|\\.define|\\.org|\\.macro|\\.hook|\\.unhook)\\b"
+    },
+    {
+      "name": "comment.line",
+      "match": ";[^\\n]+?$"
+    },
+    {
+      "name": "keyword.operator",
+      "match": "(?:;|\\+|-|\\*|=|\\(|\\)|\\{|\\})"
+    },
+    {
+      "name": "comment.line",
+      "match": "\\/\\/.*?$"
+    },
+    {
+      "name": "constant.numeric",
+      "match": "(?<!\\w)#[a-zA-Z0-9]+\\b"
+    },
+    {
+      "name": "constant.numeric",
+      "match": "(?<!\\w)\\$[a-zA-Z0-9]+\\b"
+    },
+    {
+      "name": "constant.numeric",
+      "match": "(?<!\\w)&[a-zA-Z0-9]+\\b"
+    },
+    {
+      "name": "constant.numeric",
+      "match": "(?<!\\w)[0-9]+\\b"
+    },
+    {
+      "begin": "\"",
+      "endCaptures": {
+        "0": {
+          "name": "punctuation.string.end"
+        }
+      },
+      "beginCaptures": {
+        "0": {
+          "name": "punctuation.string.begin"
+        }
+      },
+      "name": "string.quoted.double",
+      "end": "\"|$"
+    }
+  ],
+  "name": "Haze Source",
+  "scopeName": "source.haze",
+  "fileTypes": [
+    "hz",
+    "hzs",
+    "hzi"
+  ]
+}
